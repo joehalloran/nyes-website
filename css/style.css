@@ -7,7 +7,7 @@ body {
 }
 
 .navbar-default {
-    background-color: #313131;
+    background-color: #313131; /* TO DO MAKE DROPDOWN ON MOBILE TRANSPARENT - set this to transparent and then set each segment a different colour. */
     border-color: #313131;
     border-radius: 0px;
 
@@ -29,9 +29,17 @@ body {
 	color: #c23f1c;
 }
 
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+.navbar-default .navbar-toggle:focus {
+	background-color: #313131;
+}
+
+.navbar-default .navbar-toggle:hover {
 	background-color: #c23f1c;
 	border-color: #c23f1c;
+}
+
+.film-preview {
+	margin-top: 50px;
 }
 
 @media (min-width: 768px) {
