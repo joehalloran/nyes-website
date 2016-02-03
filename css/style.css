@@ -1,0 +1,66 @@
+body {
+	font-family: 'Hind Vadodara', sans-serif;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.navbar-default {
+    background-color: #313131;
+    border-color: #313131;
+    border-radius: 0px;
+
+}
+
+.navbar-default .navbar-brand {
+	color: white;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+	color: #c23f1c;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #cccccc;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+	color: #c23f1c;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+	background-color: #c23f1c;
+	border-color: #c23f1c;
+}
+
+@media (min-width: 768px) {
+	.film-preview {
+		margin-top: 100px;
+	}
+}
+
+.film-preview > div {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.film-text {
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	padding: 10px 10px 0px 10px; /*TO DO: FIX SPACING INSIDE BOX - use calc or flex-box-align*/
+	top: 0;
+	text-align: center;
+	color: white;
+	background-color: rgba(194, 63, 28, 0.5);
+}
+
+.film-preview > div:hover .film-text {
+	display: inherit;
+}
+
+.film-text > h3 {
+	font-weight: 400;
+}
