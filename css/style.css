@@ -72,3 +72,22 @@ body {
 .film-text > h3 {
 	font-weight: 400;
 }
+
+.modal-dialog {
+    margin: 10px 40px;
+}
+
+@media (min-width: 768px) {
+	.modal-dialog {
+	    margin: 30px auto;
+	}
+}
+
+.modal-header {
+	padding: 5px 15px 2px 2px;
+    border-bottom: 0px;
+}
+
+.modal-body {
+	padding-top: 5px;
+}
