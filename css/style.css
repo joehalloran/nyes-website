@@ -1,4 +1,4 @@
-body {
+	body {
 	font-family: 'Hind Vadodara', sans-serif;
 }
 
@@ -48,7 +48,7 @@ body {
 	}
 }
 
-.film-preview > div {
+.film-preview-item {
 	padding-left: 0px;
 	padding-right: 0px;
 }
@@ -65,29 +65,89 @@ body {
 	background-color: rgba(194, 63, 28, 0.5);
 }
 
-.film-preview > div:hover .film-text {
+.film-preview-item:hover .film-text {
 	display: inherit;
 }
 
 .film-text > h3 {
 	font-weight: 400;
+	font-size: 22px;
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 
-.modal-dialog {
-    margin: 10px 40px;
-}
-
-@media (min-width: 768px) {
-	.modal-dialog {
-	    margin: 30px auto;
+@media(min-width: 768px) {
+	.film-text > h3 {
+		font-size: 24px;
+		margin-top: 20px;
+		margin-bottom: 10px;
 	}
+
 }
+
+.film-text > a {
+	color: white;
+}
+
+.film-text > a:focus, .film-text > a:hover {
+	color: #AFAFAF
+}
+
+
+.film-text > a.watch-now {
+	font-size: 18px;
+}
+
+.film-text > a.film-text-close {
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	font-size: 21px;
+}
+
+.film-text > a.film-text-close:hover, .film-text > a.film-text-close:focus {
+	text-decoration: none;
+} 
+
+
+
+.modal-xl {
+	width: 100%;
+	margin: 0px auto;
+}
+
 
 .modal-header {
 	padding: 5px 15px 2px 2px;
     border-bottom: 0px;
 }
 
+.modal-header .close {
+    margin-right: -10px;
+}
+
+.modal-header .glyphicon-remove {
+	font-size: 18px;
+}
+
 .modal-body {
-	padding-top: 5px;
+	padding-top: 1px; /* fix for larger device widths */
+}
+
+.modal-content {
+	min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    background-clip: border-box;
+}
+
+/*--- about page ---*/
+
+.about-text {
+	margin-top: 80px;
+} 
+
+.about-text p {
+	font-size: 16px;
 }
