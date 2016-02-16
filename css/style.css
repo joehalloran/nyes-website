@@ -85,30 +85,17 @@
 
 }
 
-.film-text > a {
-	color: white;
-}
-
 .film-text > a:focus, .film-text > a:hover {
 	color: #AFAFAF
 }
 
-
 .film-text > a.watch-now {
+	color: #ffffff;
 	font-size: 18px;
+	border:	solid 1px;
+	border-radius: 6px;
+	padding: 2px 5px 2px 5px;
 }
-
-.film-text > a.film-text-close {
-	position: absolute;
-	top: 5px;
-	right: 15px;
-	font-size: 21px;
-}
-
-.film-text > a.film-text-close:hover, .film-text > a.film-text-close:focus {
-	text-decoration: none;
-} 
-
 
 
 .modal-xl {
