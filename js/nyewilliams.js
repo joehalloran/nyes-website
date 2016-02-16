@@ -1,12 +1,10 @@
 $('.film-preview-item').on('click', function ( e ) {
 	$( this ).siblings().each( function () {
-		$( this ).children('.film-text').hide();
+		$( this ).children('.film-text').hide().removeAttr('style');
 	});
 	$(this).children('.film-text').toggle();
-	$('.film-text').mouseleave(function() {
-		$('.film-text').each( function () {
-			$(this).removeAttr( 'style' );
-		});
+	$('.film-preview-item').mouseleave(function() {
+		$( '.film-text' ).each( function () { $(this).removeAttr('style');});
 	});
 
 });
