@@ -1,4 +1,4 @@
-	body {
+body {
 	font-family: 'Hind Vadodara', sans-serif;
 }
 
@@ -53,12 +53,15 @@
 	padding-right: 0px;
 }
 
+.film-preview-item:hover {
+	cursor: pointer;
+}
+
 .film-text {
 	display: none;
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	padding: 10px 10px 0px 10px; /*TO DO: FIX SPACING INSIDE BOX - use calc or flex-box-align*/
 	top: 0;
 	text-align: center;
 	color: white;
@@ -66,30 +69,43 @@
 }
 
 .film-preview-item:hover .film-text {
-	display: inherit;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
 }
 
-.film-text > h3 {
+.film-text > div {
+	margin: auto;
+}
+
+.film-text > div > h3 {
 	font-weight: 400;
 	font-size: 22px;
-	margin-top: 10px;
+	margin-top: 0px;
 	margin-bottom: 5px;
 }
 
 @media(min-width: 768px) {
-	.film-text > h3 {
+	.film-text > div > h3 {
 		font-size: 24px;
-		margin-top: 20px;
 		margin-bottom: 10px;
 	}
 
 }
 
-.film-text > a:focus, .film-text > a:hover {
+.film-text > div > p {
+	width: 90%;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.film-text > div > a:focus, .film-text > div > a:hover {
 	color: #AFAFAF
 }
 
-.film-text > a.watch-now {
+.film-text > div > a.watch-now {
 	color: #ffffff;
 	font-size: 18px;
 	border:	solid 1px;
@@ -100,21 +116,22 @@
 
 .modal-xl {
 	width: 100%;
-	margin: 0px auto;
+	margin: 0px;
 }
 
-
-.modal-header {
-	padding: 5px 15px 2px 2px;
-    border-bottom: 0px;
+.modal, .modal-open {
+	padding-right: 0px !important;
 }
 
-.modal-header .close {
-    margin-right: -10px;
-}
-
-.modal-header .glyphicon-remove {
-	font-size: 18px;
+.close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	font-size: 40px;
+	margin: 4px;
+	z-index: 1000;
 }
 
 .modal-body {
@@ -127,6 +144,14 @@
     border-radius: 0;
     text-align: center;
     background-clip: border-box;
+   	display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.modal-content > .container {
+	min-width: 95%;
 }
 
 /*--- about page ---*/
