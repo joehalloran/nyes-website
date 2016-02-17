@@ -163,3 +163,7 @@ body {
 .about-text p {
 	font-size: 16px;
 }
+
+.media-object {
+	max-width: 200px;
+}
