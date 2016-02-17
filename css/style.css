@@ -68,7 +68,7 @@ body {
 	background-color: rgba(194, 63, 28, 0.5);
 }
 
-.film-preview-item:hover .film-text {
+.film-preview-item:hover .film-text, .film-text-show > .film-text {
 	display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
