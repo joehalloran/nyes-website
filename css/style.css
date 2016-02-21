@@ -102,14 +102,15 @@ body {
 }
 
 .film-text > div > a:focus, .film-text > div > a:hover {
-	color: #AFAFAF
+	color: #AFAFAF;
+	text-decoration: none;
 }
 
 .film-text > div > a.watch-now {
 	color: #ffffff;
 	font-size: 18px;
-	border:	solid 1px;
-	border-radius: 6px;
+	/*border:	solid 1px;
+	border-radius: 6px;*/
 	padding: 2px 5px 2px 5px;
 }
 
