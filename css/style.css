@@ -2,19 +2,55 @@ body {
 	font-family: 'Hind Vadodara', sans-serif;
 }
 
+@media (min-width: 768px) {
+  .container {
+    width: 650px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 870px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1070px;
+  }
+}
+
 .navbar {
 	margin-bottom: 0px;
 }
 
+.navbar.navbar-default {
+	border-bottom: 1px solid #ddd;
+}
+
+@media (min-width: 768px) {
+	.navbar.navbar-default {
+		border-bottom: 0;
+	}
+}
+
 .navbar-default {
-    background-color: #313131; /* TO DO MAKE DROPDOWN ON MOBILE TRANSPARENT - set this to transparent and then set each segment a different colour. */
-    border-color: #313131;
+    background-color: #ffffff; /* #313131; /* TO DO MAKE DROPDOWN ON MOBILE TRANSPARENT - set this to transparent and then set each segment a different colour. */
+    border-color: #ffffff; /* #313131; */
     border-radius: 0px;
 
 }
 
 .navbar-default .navbar-brand {
-	color: white;
+	color: #212121;
+}
+
+@media (min-width: 768px) {
+	.navbar-default .navbar-brand {
+		padding-left: 0;
+	}
+}
+
+.navbar-default .navbar-toggle:active .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #FFF;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
@@ -22,10 +58,14 @@ body {
 }
 
 .navbar-default .navbar-nav>li>a {
-	color: #cccccc;
+	color: #212121;
 }
 
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+.navbar-nav>li:last-child>a {
+	padding-right: 0px;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a.active {
 	color: #c23f1c;
 }
 
@@ -38,24 +78,32 @@ body {
 	border-color: #c23f1c;
 }
 
+
 .film-preview {
+	display: block;
 	margin-top: 50px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	.film-preview {
-		margin-top: 100px;
+		margin-top: 0;
+		height: 100%;
+		display: -webkit-flex;
+	    display: flex;
+	    -webkit-align-content: center;
+	    align-content: center;
+	    -webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
 	}
 }
+
+
 
 .film-preview-item {
 	padding-left: 0px;
 	padding-right: 0px;
 }
 
-.film-preview-item:hover {
-	cursor: pointer;
-}
 
 .film-text {
 	display: none;
@@ -68,7 +116,7 @@ body {
 	background-color: rgba(194, 63, 28, 0.5);
 }
 
-.film-preview-item:hover .film-text, .film-text-show > .film-text {
+.film-preview-item:hover .film-text, .film-text-show .film-text {
 	display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
@@ -101,18 +149,13 @@ body {
 	margin-right: auto;
 }
 
-.film-text > div > a:focus, .film-text > div > a:hover {
-	color: #AFAFAF;
+.film-text div > .watch-now {
+	color: #ffffff;
+	font-size: 18px;
+	padding: 2px 5px 2px 5px;
 	text-decoration: none;
 }
 
-.film-text > div > a.watch-now {
-	color: #ffffff;
-	font-size: 18px;
-	/*border:	solid 1px;
-	border-radius: 6px;*/
-	padding: 2px 5px 2px 5px;
-}
 
 
 .modal-xl {
@@ -124,7 +167,7 @@ body {
 	padding-right: 0px !important;
 }
 
-.close {
+/*.close {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -134,10 +177,7 @@ body {
 	margin: 4px;
 	z-index: 1000;
 }
-
-.modal-body {
-	padding-top: 1px; /* fix for larger device widths */
-}
+*/
 
 .modal-content {
 	min-height: 100%;
@@ -151,13 +191,65 @@ body {
     align-items: center;
 }
 
-.modal-content > .container {
-	min-width: 95%;
+.modal-content > .container-fluid {
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+
+}
+
+.modal-content .embed-column {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+@media (orientation: landscape) {
+	.modal-content .embed-column {
+		padding-right: 75px;
+		padding-left: 75px;
+	}
+}
+
+.modal-header {
+	border-bottom: 0;
+	height: 75px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 40px;
+    margin-left: 35px;
+    background-color: #222;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 40px;
+    background-color: #222;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 /*--- about page ---*/
 
-.about-text {
+.text-page {
 	margin-top: 80px;
 } 
 
