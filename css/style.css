@@ -107,12 +107,6 @@ body {
 		margin-top: 0;
 		clear: both;
 		height: 100%;
-		
-		/* need these
-		display: flex;
-		align-content: center;
-		flex-flow: row wrap;
-		*/
 
 		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
 		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -157,10 +151,24 @@ body {
 }
 
 .film-preview-item:hover .film-text, .film-text-show .film-text {
-	display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
+
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -moz-flex;
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12 */
+
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+
 }
 
 .film-text > div {
@@ -207,28 +215,30 @@ body {
 	padding-right: 0px !important;
 }
 
-/*.close {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 40px;
-	height: 40px;
-	font-size: 40px;
-	margin: 4px;
-	z-index: 1000;
-}
-*/
-
 .modal-content {
 	min-height: 100%;
     border: 0;
     border-radius: 0;
     text-align: center;
     background-clip: border-box;
-   	display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
+
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -moz-flex;
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12 */
+
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+
 }
 
 .modal-content > .container-fluid {
