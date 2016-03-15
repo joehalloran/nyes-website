@@ -47,31 +47,28 @@
       </div><!-- /.container-fluid -->
     </nav>
     <div id="blog-main" class="container text-page">
-      <div class="row">
-        <div  class="col-sm-12">
-          <h1>BLOG</h1>
-        </div> <!-- /.col -->
-      </div> <!-- /.row -->
       <article class="row">
-        <div class="col-sm-12">
-          <hr />
-          <h3>LFG / NOW IN SOHO</h3>
-        </div> <!-- /.col -->
         <div class="col-sm-4 col-md-3">
-          <a href="#">
+          <div class="film-preview-item">
             <picture>
-              <source media="(min-width: 768px)" srcset="img/lfwsoho-260.jpg">
-              <img src="img/lfwsoho-770.jpg" class="img-responsive"
-                  srcset="img/lfwsoho-770.jpg 770w, 
-                          img/lfwsoho-560.jpg 560w,
-                          img/lfwsoho-460.jpg 460w,
-                          img/lfwsoho-360.jpg 360w"
-                  sizes="100vw"
-                  alt="London Fashion Week - Now in Soho" />
-          </picture>
-          </a>
+                <source media="(min-width: 768px)" srcset="img/lfwsoho-260.jpg">
+                <img src="img/lfwsoho-770.jpg" class="img-responsive"
+                    srcset="img/lfwsoho-770.jpg 770w, 
+                            img/lfwsoho-560.jpg 560w,
+                            img/lfwsoho-460.jpg 460w,
+                            img/lfwsoho-360.jpg 360w"
+                    sizes="100vw"
+                    alt="London Fashion Week - Now in Soho" />
+            </picture>
+            <div class="film-text">
+              <a href="#" class="watch-now" data-toggle="modal" data-target=".bs-example-modal-lg">
+                <img src="img/play_button.png">
+              </a>
+            </div> <!-- /.film-text -->
+          </div> <!-- /.film-preview-item -->
         </div> <!-- /.col -->
         <div class="col-sm-8 col-md-9">
+          <h3>LFW / NOW IN SOHO</h3>
           <p>Producer: Black Sheep Studios</p>
           <p>Promotion of London Fashion Week's move to Soho. Set to a poem by Harry Baker and made in collaboration with Chris Hugall.</p>
           <a href="#" class="watch-now" data-toggle="modal" data-target=".bs-example-modal-lg">WATCH</a>
@@ -80,23 +77,28 @@
       <article class="row">
         <div class="col-sm-12">
           <hr />
+        </div> <!-- /.col -->
+        <div class="col-sm-4 col-md-3">
+          <div class="film-preview-item">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/blood-260.jpg">
+            <img src="img/blood-770.jpg" class="img-responsive"
+                srcset="img/blood-770.jpg 770w, 
+                        img/blood-560.jpg 560w,
+                        img/blood-460.jpg 460w,
+                        img/blood-360.jpg 360w"
+                sizes="100vw"
+                alt="Blood" />
+          </picture>
+          <div class="film-text">
+              <a href="#" class="watch-now" data-toggle="modal" data-target=".bs-example-modal-lg">
+                <img src="img/play_button.png">
+              </a>
+            </div> <!-- /.film-text -->
+          </div> <!-- /.film-preview-item -->
+        </div> <!-- /.col -->
+        <div class="col-sm-8 col-md-9">
           <h3>BLOOD</h3>
-        </div> <!-- /.col -->
-        <div class="col-sm-4 col-md-3">
-          <a href="#">
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/blood-260.jpg">
-              <img src="img/blood-770.jpg" class="img-responsive"
-                  srcset="img/blood-770.jpg 770w, 
-                          img/blood-560.jpg 560w,
-                          img/blood-460.jpg 460w,
-                          img/blood-360.jpg 360w"
-                  sizes="100vw"
-                  alt="Blood" />
-          </picture>
-          </a>
-        </div> <!-- /.col -->
-        <div class="col-sm-8 col-md-9">
           <p>Producer: Black Sheep Studios</p>
           <p>Promotion of London Fashion Week's move to Soho. Set to a poem by Harry Baker and made in collaboration with Chris Hugall.</p>
           <a href="#" class="watch-now" data-toggle="modal" data-target=".bs-example-modal-lg">WATCH</a>
@@ -105,10 +107,9 @@
       <article class="row">
         <div class="col-sm-12">
           <hr />
-          <h3>MY NAME IS</h3>
         </div> <!-- /.col -->
         <div class="col-sm-4 col-md-3">
-          <a href="#">
+          <div class="film-preview-item">
             <picture>
               <source media="(min-width: 768px)" srcset="img/mynameis-260.jpg">
               <img src="img/mynameis-770.jpg" class="img-responsive"
@@ -118,10 +119,16 @@
                           img/mynameis-360.jpg 360w"
                   sizes="100vw"
                   alt="My Name Is"/>
-          </picture>
-          </a>
+            </picture>
+            <div class="film-text">
+              <a href="#" class="watch-now" data-toggle="modal" data-target=".bs-example-modal-lg">
+                <img src="img/play_button.png">
+              </a>
+            </div> <!-- /.film-text -->
+          </div> <!-- /.film-preview-item -->
         </div> <!-- /.col -->
         <div class="col-sm-8 col-md-9">
+          <h3>MY NAME IS</h3>
           <p>Producer: Black Sheep Studios</p>
           <p>Promotion of London Fashion Week's move to Soho. Set to a poem by Harry Baker and made in collaboration with Chris Hugall.</p>
           <a href="#" class="watch-now" data-toggle="modal" data-target=".bs-example-modal-lg">WATCH</a>
@@ -130,9 +137,35 @@
       <footer class="row">    
         <div class="col-sm-12">
           <hr />
+          <p class="text-right" style="font-size: 12px;">&copy Nye Williams 2016</p>
         </div><!-- /.col -->
       </footer>
     </div><!-- /.container -->
+
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-content">
+      <div class="container-fluid">
+          <div class="row">
+            <!-- <div class="modal-header"> -->
+              <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+              </div>
+            <!-- </div> -->
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 embed-column">
+              <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/74013563" width="1080" height="607" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  <p><a href="https://vimeo.com/74013563">Meatyard</a> from <a href="https://vimeo.com/nyewilliamsfilms">Nye</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                </div>
+              </div> <!-- /.modal-body -->
+            </div> <!-- /.col -->
+          </div> <!-- /.row -->
+        </div> <!-- /.container -->
+      </div> <!-- /.modal-content -->
+    </div> <!-- /.modal -->
 
     
 

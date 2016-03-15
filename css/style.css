@@ -1,5 +1,6 @@
 body {
 	font-family: 'Hind Vadodara', sans-serif;
+
 }
 
 @media (min-width: 768px) {
@@ -150,7 +151,7 @@ body {
 	background-color: rgba(194, 63, 28, 0.5);
 }
 
-.film-preview-item:hover .film-text, .film-text-show .film-text {
+.film-preview-item:hover .film-text, .film-text-show .film-text, .blog-image:hover .play-button {
 
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -177,14 +178,13 @@ body {
 
 .film-text > div > h3 {
 	font-weight: 400;
-	font-size: 22px;
+	font-size: 16px;
 	margin-top: 0;
 	margin-bottom: 5px;
 }
 
 @media(min-width: 768px) {
 	.film-text > div > h3 {
-		font-size: 24px;
 		margin-bottom: 10px;
 	}
 
@@ -199,12 +199,16 @@ body {
 
 .film-text div > .watch-now {
 	color: #ffffff;
-	font-size: 18px;
+	font-size: 16px;
 	padding: 2px 5px 2px 5px;
 	text-decoration: none;
 }
 
-
+@media (min-width: 992px) {
+	#index-main footer {
+		margin-top: -120px;
+	}
+}
 
 .modal-xl {
 	width: 100%;
@@ -307,13 +311,38 @@ body {
 	font-size: 16px;
 }
 
-@media (min-width: 768px) {
+#blog-main article img {
+	margin-bottom: 10px;
+}
 
-	#blog-main {
+#blog-main article .film-preview-item {
+	position: relative;
+}
+
+#blog-main article .film-text a {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#blog-main article .film-text a img {
+	margin-bottom: 0;
+}
+
+#blog-main article h3 {
+	margin-top: 0;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+@media (min-width: 768px) {
+	#blog-main, #about-main {
 		padding-left: 0;
 		padding-right: 0;
 	}
-
+	#about-main footer {
+		margin-top: 200px;
+	}
 }
+
 
 
