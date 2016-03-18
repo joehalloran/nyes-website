@@ -13,5 +13,27 @@ $(function () {
 			$(this).removeClass('film-text-show'); //hide all if mouse leaves any
 		});
 	});
+
+	$('.modal').each( function() {
+		$( this ).on('shown.bs.modal', function () {
+			console.log("Show");
+		});
+	});
+	$('.modal').on('show.bs.modal', function () {
+		console.log("Show");
+		var iframe = $(this).children('.embed-responsive');
+		// $f == Froogaloop
+		var player = $f(iframe);
+
+		$('.modal').on('hidden.bs.modal', function () {
+			console.log("CLOSE");
+			player.api('pause');
+		});
+	});
+	
+
+	$('.modal').on('shown.bs.modal', function () {
+		player.api('play');
+	});
 });
 
