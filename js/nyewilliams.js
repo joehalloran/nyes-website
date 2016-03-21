@@ -42,5 +42,10 @@ $(function () {
     var status = $('.status');
 	});
 
+	 // Call pause when pause button clicked
+            addEvent(pauseBtn, 'click', function() {
+                froogaloop.api('pause');
+            }, false);
+
 });
 
