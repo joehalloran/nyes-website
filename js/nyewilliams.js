@@ -43,6 +43,7 @@ $(function () {
 	});
 
 	 // Call pause when pause button clicked
+	 pauseBtn = ('.modal-close'),children('img'),
             addEvent(pauseBtn, 'click', function() {
                 froogaloop.api('pause');
             }, false);
