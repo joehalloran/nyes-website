@@ -36,17 +36,5 @@ $(function () {
 	// 	player.api('play');
 	// });
 
-	$(function() {
-    var player = $('iframe');
-    var playerOrigin = '*';
-    var status = $('.status');
-	});
-
-	 // Call pause when pause button clicked
-	 pauseBtn = ('.modal-close'),children('img'),
-            addEvent(pauseBtn, 'click', function() {
-                froogaloop.api('pause');
-            }, false);
-
 });
 
