@@ -40,7 +40,7 @@ $(function () {
     var player = $('iframe');
     var playerOrigin = '*';
     var status = $('.status');
-	}
+	)};
 
 });
 
