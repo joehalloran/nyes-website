@@ -14,26 +14,33 @@ $(function () {
 		});
 	});
 
-	$('.modal').each( function() {
-		$( this ).on('shown.bs.modal', function () {
-			console.log("Shown");
-		});
-	});
-	$('.modal').on('show.bs.modal', function () {
-		console.log("Show");
-		var iframe = $(this).children('.embed-responsive');
-		// $f == Froogaloop
-		var player = $f(iframe);
+	// $('.modal').each( function() {
+	// 	$( this ).on('shown.bs.modal', function () {
+	// 		console.log("Shown");
+	// 	});
+	// });
+	// $('.modal').on('show.bs.modal', function () {
+	// 	console.log("Show");
+	// 	var iframe = $(this).children('.embed-responsive');
+	// 	// $f == Froogaloop
+	// 	var player = $f(iframe);
 
-		$('.modal').on('hidden.bs.modal', function () {
-			console.log("CLOSE");
-			player.api('pause');
-		});
-	});
+	// 	$('.modal').on('hidden.bs.modal', function () {
+	// 		console.log("CLOSE");
+	// 		player.api('pause');
+	// 	});
+	// });
 	
 
-	$('.modal').on('shown.bs.modal', function () {
-		player.api('play');
-	});
+	// $('.modal').on('shown.bs.modal', function () {
+	// 	player.api('play');
+	// });
+
+	$(function() {
+    var player = $('iframe');
+    var playerOrigin = '*';
+    var status = $('.status');
+	}
+
 });
 
