@@ -16,7 +16,7 @@ $(function () {
 
 	$('.modal').each( function() {
 		$( this ).on('shown.bs.modal', function () {
-			console.log("Show");
+			console.log("Shown");
 		});
 	});
 	$('.modal').on('show.bs.modal', function () {
