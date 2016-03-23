@@ -14,15 +14,7 @@ $(function(){
      * between the W3C method for adding events (addEventListener) and
      * IE's (attachEvent).
      */
-    function addEvent(element, eventName, callback) {
-        if (element.addEventListener) {
-            element.addEventListener(eventName, callback, false);
-        }
-        else {
-            element.attachEvent('on' + eventName, callback);
-        }
-    }
-
+  
     /**
      * Called once a vimeo player is loaded and ready to receive
      * commands. You can add events and make api calls only after this
@@ -39,20 +31,20 @@ $(function(){
          * return no values.
          */
         function setupSimpleButtons() {
-            var pauseBtn = container.querySelector('.modal-close');
+            var $pauseBtn = $('.close-modal');
+            console.log($pauseBtn);
 
        
 
             // Call pause when pause button clicked
-            addEvent(pauseBtn, 'click', function() {
+            $pauseBtn.click( function() {
                 froogaloop.api('pause');
-            }, false);
+            });
 
 
         }
 
         setupSimpleButtons();
-        setupEventListeners();
 
     }
 });
