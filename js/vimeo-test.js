@@ -39,7 +39,7 @@ $(function(){
          * return no values.
          */
         function setupSimpleButtons() {
-            var pauseBtn = buttons.querySelector('.modal-close');
+            var pauseBtn = container.querySelector('.modal-close');
 
        
 
