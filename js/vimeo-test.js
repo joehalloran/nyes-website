@@ -1,4 +1,4 @@
-(function(){
+$(function(){
 
     // Listen for the ready event for any vimeo video players on the page
     var vimeoPlayers = document.querySelectorAll('iframe'),
