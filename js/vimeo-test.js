@@ -31,7 +31,7 @@ $(function(){
     function ready(player_id) {
         // Keep a reference to Froogaloop for this player
         var container = document.getElementById(player_id).parentElement.parentElement,
-            froogaloop = $f(player_id),
+            froogaloop = $f(player_id);
         /**
          * Sets up the actions for the buttons that will perform simple
          * api calls to Froogaloop (play, pause, etc.). These api methods
@@ -39,7 +39,7 @@ $(function(){
          * return no values.
          */
         function setupSimpleButtons() {
-            var pauseBtn = buttons.querySelector('.modal-close'),
+            var pauseBtn = buttons.querySelector('.modal-close');
 
        
 
