@@ -3,22 +3,14 @@ $(function(){
     // Listen for the ready event for any vimeo video players on the page
     var vimeoPlayers = document.querySelectorAll('iframe'),
         player;
-
+        
     for (var i = 0, length = vimeoPlayers.length; i < length; i++) {
         player = vimeoPlayers[i];
         $f(player).addEvent('ready', ready);
     }
-
-    /**
-     * Utility function for adding an event. Handles the inconsistencies
-     * between the W3C method for adding events (addEventListener) and
-     * IE's (attachEvent).
-     */
-  
     /**
      * Called once a vimeo player is loaded and ready to receive
-     * commands. You can add events and make api calls only after this
-     * function has been called.
+     * commands.
      */
     function ready(player_id) {
         // Keep a reference to Froogaloop for this player
@@ -26,25 +18,17 @@ $(function(){
             froogaloop = $f(player_id);
         /**
          * Sets up the actions for the buttons that will perform simple
-         * api calls to Froogaloop (play, pause, etc.). These api methods
-         * are actions performed on the player that take no parameters and
-         * return no values.
+         * api calls to Froogaloop.
          */
-        function setupSimpleButtons() {
+        function setupPauseButton() {
+        	// Setup pause button
             var $pauseBtn = $('.close-modal');
-            console.log($pauseBtn);
-
-       
 
             // Call pause when pause button clicked
             $pauseBtn.click( function() {
                 froogaloop.api('pause');
             });
-
-
         }
-
-        setupSimpleButtons();
-
+        setupPauseButton();
     }
 });
